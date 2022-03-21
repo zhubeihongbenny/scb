@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: springboot-api
+  messages:
+    basename: messages_zh
+
+setting:
+  lang: ja-JP
+  langZh: zh-CN
+  addMapping: /**
+  allowedOrigins: "*"
+  allowedMethods: "*"
+  allowedHeaders: "*"
+  s3:
+    buildFlg: 0
+    accessKey: AKIAXH26UL4N3YKN3UH2
+    secretKey: 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
+    region: ap-northeast-1
+    photoBucketName: dk-installation-photo-data-dev-ts
+  faceplusplus:
+    urlDetect: https://api-cn.faceplusplus.com/facepp/v3/detect
+    urlCompare: https://api-cn.faceplusplus.com/facepp/v3/compare
+    apiKey: kWMW4qyYwArcFMvJV8w6Y1cl0jNMu8S0
+    apiSecret: XLqZGQFsoP2irMjJAHi_udRhEsLYxCXu
+  photoBookPath: C:\MyWork\MaterialsCollection\photo\output\
+  photoListJsonPath: C:\MyWork\MaterialsCollection\photo\json\
+  inputDataPath: C:\MyWork\springboot-batch-csv-txt\src\main\resources\csv\
+  findDeviceAccessLimit: 50
+  findDataLimit: 200
+  multipartFileMaxSize: 10240KB
+  multipartFileMaxRequestSize: 102400KB
+  # aliyunSSH:
+  #   username: root
+  #   password: Aa820222
+  #   host: 139.9.169.166
+  #   port: 22
+  # aliyunDB:
+  #   aliyunDBPort: 3306
+  #   aliyunLocalhost: localhost
+  #   aliyunLocalPort: 3307
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,text/css
+
+# 下記の設定は、application-local.ymlのみ
+# ローカルHTTPS設定
+#server:
+#  port: 8443
+#  ssl:
+#    enable: true
+#    key-store: keystore.p12
+#    key-store-password: linkage
+#    key-store-type: PKCS12
+#    key-alias: tomcat

@@ -1,0 +1,5 @@
+# このファイルは修正不可。
+spring:
+  profiles:
+    active: "@spring.profiles.active@"
+# このファイルは修正不可。

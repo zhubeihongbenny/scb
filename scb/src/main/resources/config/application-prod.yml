@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://writer.aurora.daikin.internal:3306/dkipdb?serverTimezone=JST&characterEncoding=UTF-8&characterSetResults=UTF-8
+    username: applicationphoto
+    password: z3qPQ#%9,2H*
+    sql-script-encoding: UTF-8
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+  messages:
+    basename: messages_ja
+
+setting:
+  lang: ja-JP
+  addMapping: /**
+  allowedOrigins: "*"
+  allowedMethods: "*"
+  allowedHeaders: "*"
+  s3:
+    buildFlg: 1
+    accessKey:
+    secretKey:
+    region: ap-northeast-1
+    photoBucketName: dk-installation-photo-data
+  faceplusplus:
+    url: https://api-us.faceplusplus.com/facepp/v3/detect
+    apiKey: q-1MbFGenbKTd2dnb-uTG7kJNta7eaz2
+    apiSecret: G493itfSSnkfyV9sM9vQiNEa0mToK8mQ
+  photoBookPath: /var/tmp/photo_book/
+  photoListJsonPath: /var/tmp/photo_json/
+  findDeviceAccessLimit: 50
+  findDataLimit: 200
+  multipartFileMaxSize: 10240KB
+  multipartFileMaxRequestSize: 102400KB
